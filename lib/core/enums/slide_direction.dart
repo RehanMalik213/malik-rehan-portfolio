@@ -1,1 +1,0 @@
-enum SlideDirection { left, right }
