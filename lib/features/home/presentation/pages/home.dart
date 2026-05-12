@@ -28,7 +28,7 @@ class Home extends StatelessWidget {
             fontSize: AppConstants.xLargeFont,
             fontWeight: FontWeight.w700,
           ),
-          Container(width: 150.w, height: 1, color: AppColors.primary),
+          Container(width: 150.w, height: 2, color: AppColors.primary),
           verticalSpace,
           AppText(text: "My professional journey"),
         ],
