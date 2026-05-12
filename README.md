@@ -1,17 +1,39 @@
-# portfolio
+## Malik Rehan - Mobile App Engineer (Flutter & Kotlin)
 
-A new Flutter project.
+Professional portfolio website built with Flutter Web, showcasing 3+ years of experience in building production mobile applications in mobility and e-commerce domains.
 
-## Getting Started
+## 🌐 Live Demo
+Check out the live site here: https://malik-rehan-portfolio.web.app
 
-This project is a starting point for a Flutter application.
+## 🛠️ Tech Stack
+- **Framework:** Flutter Web
+- **Language:** Dart
+- **State Management:** Riverpod
+- **Hosting:** Firebase Hosting
+- **Architecture:** Clean Architecture (Feature-first)
 
-A few resources to get you started if this is your first Flutter project:
+## 📂 Project Structure
+This project follows a professional **Clean Architecture** approach for better scalability and separation of concerns:
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- **core/**: Contains global constants, themes, network configurations, and shared utility functions.
+- **features/**: Organized by functionality (e.g., `home` feature):
+  - **data/**: Handles API data sources, models, and repository implementations.
+  - **domain/**: Contains business logic with UseCases and Repository interfaces.
+  - **presentation/**: Manages the UI layer:
+    - `controller/`: **Riverpod** state management logic (e.g., `home_controller.dart`, `home_state.dart`).
+    - `pages/`: Main UI screens.
+    - `widgets/`: Feature-specific reusable components.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📱 Professional Background
+I am a Mobile App Engineer with a proven track record of:
+- Shipping apps serving **10,000+ active users**.
+- Implementing **Real-time Location Tracking** (Pusher, Google Maps).
+- Building **Offline-first systems** with Hive and Isar local storage.
+- Full lifecycle management from **Figma-to-Code** to Play Store/App Store deployment.
+
+## 🛠️ Installation & Setup
+To run this project locally:
+
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/RehanMalik213/malik-rehan-portfolio.git
