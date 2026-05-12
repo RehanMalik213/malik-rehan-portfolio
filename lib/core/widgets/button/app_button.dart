@@ -12,7 +12,11 @@ class AppButton extends StatelessWidget {
   final bool loading;
   final VoidCallback onPress;
   final Color? textColor;
+  final double? textFontSize;
+  final FontWeight? textFontWeight;
   final Color? color;
+  final bool hasIcon;
+  final IconData? iconData;
   const AppButton({
     super.key,
     required this.title,
@@ -22,21 +26,38 @@ class AppButton extends StatelessWidget {
     required this.onPress,
     this.textColor,
     this.color,
+    this.textFontSize,
+    this.textFontWeight,
+    this.hasIcon = false,
+    this.iconData,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: height ?? 60.w,
-      width: width ?? 200.w,
+      padding: EdgeInsets.symmetric(vertical: 5.w, horizontal: 15.w),
+      // height: (height ?? 0).w,
+      // width: (width ?? 0).w,
       decoration: BoxDecoration(
         color: color ?? AppColors.primary,
         borderRadius: BorderRadius.circular(AppConstants.radius),
       ),
-      child: Center(
-        child: loading
-            ? CircularProgressIndicator(color: Colors.white)
-            : AppText(text: title),
+      child: Row(
+        mainAxisAlignment: .center,
+        children: [
+          Center(
+            child: loading
+                ? CircularProgressIndicator(color: Colors.white)
+                : AppText(
+                    text: title,
+                    color: textColor,
+                    fontSize: textFontSize ?? AppConstants.mediumFont,
+                    fontWeight: textFontWeight ?? FontWeight.w500,
+                  ),
+          ),
+          if (hasIcon)
+            iconData != null ? Icon(iconData!, size: 20.w) : SizedBox.shrink(),
+        ],
       ),
     ).onViewClick(onPress);
   }

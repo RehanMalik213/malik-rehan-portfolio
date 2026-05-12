@@ -40,6 +40,7 @@ dependencies:
   cached_network_image: ^3.4.1
   fpdart: ^1.2.0
   dio: ^5.9.2
+  video_player: ^2.11.1
 
   shared_preferences: ^2.5.5
   easy_localization: ^3.0.8
@@ -71,6 +72,7 @@ flutter:
     - assets/vectors/
     - assets/translations/
     - assets/fonts/
+    - assets/videos/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -87,7 +89,7 @@ flutter:
     - family: Inter
       fonts:
         - asset: assets/fonts/InterRegular.ttf
-          weight: 400
+          weight: 300
         - asset: assets/fonts/InterMedium.ttf
           weight: 500
         - asset: assets/fonts/InterBold.ttf

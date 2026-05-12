@@ -23,7 +23,7 @@ class AppImageView extends StatelessWidget {
   Widget build(BuildContext context) {
     if (imagePath.isEmpty) return const SizedBox.shrink();
 
-    final targetSize = imageSize ?? Size(100.w, 50.h);
+    final targetSize = imageSize ?? Size(100.w, 50.w);
     final cacheSize = _calculateCacheSize(targetSize, context);
 
     return _buildImage(context, cacheSize);
@@ -53,7 +53,7 @@ class AppImageView extends StatelessWidget {
 
     return CachedNetworkImage(
       imageUrl: newPath,
-      height: imageSize?.height.h,
+      height: imageSize?.height.w,
       width: imageSize?.width.w,
       memCacheWidth: cacheSize,
       memCacheHeight: cacheSize,
@@ -71,7 +71,7 @@ class AppImageView extends StatelessWidget {
     if (imagePath.endsWith('.svg')) {
       return SvgPicture.asset(
         imagePath,
-        height: imageSize?.height.h,
+        height: imageSize?.height.w,
         width: imageSize?.width.w,
         fit: fit,
         // ignore: deprecated_member_use
@@ -81,7 +81,7 @@ class AppImageView extends StatelessWidget {
 
     return Image.asset(
       imagePath,
-      height: imageSize?.height.h,
+      height: imageSize?.height.w,
       width: imageSize?.width.w,
       cacheWidth: cacheSize,
       cacheHeight: cacheSize,
@@ -97,7 +97,7 @@ class AppImageView extends StatelessWidget {
   Widget _fileImage(int cacheSize) {
     return Image.file(
       File(imagePath),
-      height: imageSize?.height.h,
+      height: imageSize?.height.w,
       width: imageSize?.width.w,
       cacheWidth: cacheSize,
       cacheHeight: cacheSize,

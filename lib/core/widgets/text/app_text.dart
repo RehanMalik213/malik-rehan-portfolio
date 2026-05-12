@@ -40,7 +40,7 @@ class AppText extends StatelessWidget {
           TextStyle(
             fontFamily: defaultFont,
             fontSize: (fontSize ?? 15).sp,
-            fontWeight: fontWeight,
+            fontWeight: fontWeight ?? FontWeight.w300,
             color: color,
             height: isUrdu ? 1.5 : 1.2,
           ),

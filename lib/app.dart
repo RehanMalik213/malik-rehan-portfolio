@@ -13,7 +13,7 @@ class MyApp extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final themeMode = ref.watch(themeControllerProvider);
     return ScreenUtilInit(
-      designSize: const Size(1440, 900),
+      designSize: const Size(1085, 3572.5),
       minTextAdapt: true,
       splitScreenMode: true,
       useInheritedMediaQuery: true,
